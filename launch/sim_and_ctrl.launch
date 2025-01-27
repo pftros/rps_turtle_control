@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="rps_turtle_control" type="turtle_control.py" name="controller" output="screen">
+    <remap from="cmd_vel" to="turtle1/cmd_vel"/>
+    <remap from="color" to="turtle1/color_sensor"/>
+  </node>
+
+  <node pkg="turtlesim" type="turtlesim_node" name="turtlesim"/>
+
+</launch>
